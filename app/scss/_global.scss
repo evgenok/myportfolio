@@ -1,0 +1,45 @@
+html {
+   --top-spacing: 100px;
+   scroll-padding-top: var(--top-spacing);
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+a {
+   display: inline-block;
+   text-decoration: none;
+}
+
+ul,
+li {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+body {
+   box-sizing: border-box;
+   // font-family: 'Quicksand', sans-serif;
+   // font-family: "Raleway", sans-serif;
+   font-family: 'Roboto', sans-serif;
+   font-size: 24px;
+   line-height: 1.5;
+   font-weight: 400;
+   background-color: $white;
+   margin: 0;
+   padding: 0;
+}
+
+body._lock {
+   overflow: hidden;
+}
+
+.container {
+   max-width: 1530px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
