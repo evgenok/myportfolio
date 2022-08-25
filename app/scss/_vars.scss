@@ -1,9 +1,10 @@
-$white: #EFEFEF;
-$black: #241F21;
-$orange: #F36720;
-$grey: #7C7C7E;
+$white: #efefef;
+$black: #241f21;
+$orange: #f36720;
+$grey: #7c7c7e;
+$yellow: #ffa502;
 
-@mixin f700{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+@mixin f700 {
+   font-family: "Roboto", sans-serif;
+   font-weight: 700;
 }
