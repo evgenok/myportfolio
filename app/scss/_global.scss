@@ -46,3 +46,14 @@ body._lock {
    margin: 0 auto;
    padding: 0 15px;
 }
+
+.title {
+   color: $black;
+   font-weight: 700;
+   font-size: 56px;
+   text-align: center;
+   font-family: "Raleway", sans-serif;
+   span{
+      color: $orange;
+   }
+}
