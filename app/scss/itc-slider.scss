@@ -1,0 +1,126 @@
+.section__slider {
+   padding-top: 90px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.slider {
+   position: relative;
+}
+.slider__img-1 {
+   width: 575px;
+   height: 415px;
+   img {
+      max-width: 100%;
+   }
+}
+.slider__img-2 {
+   height: 615x;
+   width: 460px;
+   img {
+      max-width: 100%;
+   }
+}
+
+/* Кнопки вперед и назад */
+.slider .prev,
+.slider .next {
+   cursor: pointer;
+   position: absolute;
+   top: 55%;
+   transform: translateY(-50%);
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: #333;
+   font-weight: bold;
+   font-size: 36px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+}
+
+.slider .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+}
+
+/* При наведении на кнопки добавляем фон кнопок */
+
+.slider .prev:hover,
+.slider .next:hover {
+   color: rgba(243, 103, 32, 1);
+   background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Заголовок слайда */
+.slideText {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   color: #fff;
+   font-size: 35px;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   text-shadow: 1px 1px 1px #000, 0 0 1em #000;
+   opacity: 0;
+   background-color: rgba(243, 103, 32, 1);
+   transition: all 0.3s linear;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   img{
+      cursor: zoom-in;
+   }
+}
+.slideText:hover {
+   opacity: 0.7;
+}
+
+/* Кружочки */
+
+.slider-dots {
+   text-align: center;
+}
+.slider-dots_item {
+   cursor: pointer;
+   height: 12px;
+   width: 12px;
+   margin: 0 2px;
+   background-color: rgba(243, 103, 32, 0.7);
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+}
+
+.active,
+.slider-dots_item:hover {
+   background-color: rgba(243, 103, 32, 1);
+}
+
+/* Анимация слайдов */
+
+.slider .item {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+   from {
+      opacity: 0.4;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes fade {
+   from {
+      opacity: 0.4;
+   }
+   to {
+      opacity: 1;
+   }
+}

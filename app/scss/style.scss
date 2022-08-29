@@ -6,6 +6,11 @@
 .header {
    width: 100%;
    background-color: $orange;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 10;
 }
 .menu {
    height: 90px;
@@ -21,7 +26,8 @@
 }
 a.menu__list-item {
    color: $white;
-   padding: 5px 10px;
+   padding: -5px -10px;
+   margin: 5px 10px;
 }
 .btn {
    cursor: pointer;
@@ -44,6 +50,7 @@ a.menu__list-item {
 .home {
    background: url("../images/bg/home-bg.jpg") center no-repeat;
    height: 90vh;
+   margin-top: 90px;
    position: relative;
 }
 .home__title {
@@ -346,9 +353,9 @@ a.menu__list-item {
    padding: 30px;
    box-shadow: 4px 4px 3px 0px rgba(124, 124, 126, 0.7);
    transition: all 0.2s ease;
-   &:hover{
+   &:hover {
       margin-left: 4px;
-      box-shadow: 0px 0px 0px 0px rgba(124, 124, 126, 0.7);
+      box-shadow: none;
    }
 }
 .contacts__card-top {
@@ -357,8 +364,6 @@ a.menu__list-item {
    a {
       font-size: 20px;
    }
-}
-.contacts__card-img {
 }
 .contacts__card-item {
    display: inline-block;
@@ -381,8 +386,6 @@ a.menu__list-item {
    display: flex;
    flex-direction: column;
    width: 280px;
-}
-.contacts__img {
 }
 .form {
    width: 50%;
@@ -410,15 +413,13 @@ a.menu__list-item {
       color: $grey;
       font-family: "Quicksand", sans-serif;
       box-shadow: 4px 4px 3px 0px rgba(124, 124, 126, 0.7);
+      transition: all 0.2s ease;
+      &:focus {
+         outline: none;
+         margin-left: 4px;
+         box-shadow: none;
+      }
    }
-}
-.contacts__name {
-}
-.contacts__email {
-}
-.contacts__tel {
-}
-.contacts__services {
 }
 .contacts__message {
    padding-top: 20px;
@@ -445,7 +446,21 @@ a.menu__list-item {
    color: $white;
    font-size: 16px;
 }
-.menu__logo {
+.footer__copy-list {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+a.footer__copy-item {
+   li:hover {
+      animation-name: bounce;
+      transform-origin: center bottom;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+   }
+}
+.footer__copy-item + .footer__copy-item {
+   margin-left: 15px;
 }
 
 @import "media";
