@@ -98,3 +98,24 @@
   opacity: 1;
   transition: all 1.5s;
 }
+
+// -------------полоса прокрутки-----------
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* дорожка */
+::-webkit-scrollbar-track {
+  background: rgb(191, 191, 191);box-shadow: inset 0 0 5px grey;
+}
+
+/* бегунок */
+::-webkit-scrollbar-thumb {
+  background: #f36720;
+  border-radius: 5px;
+}
+
+/* бегунок при наведении */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff5500;
+}

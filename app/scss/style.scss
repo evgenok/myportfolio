@@ -11,6 +11,7 @@
    left: 0;
    right: 0;
    z-index: 10;
+   transition: all 0.4s linear;
 }
 .menu {
    height: 90px;
@@ -24,7 +25,7 @@
    font-weight: 500;
    text-transform: uppercase;
 }
-a.menu__list-item {
+.menu__list-item {
    color: $white;
    padding: -5px -10px;
    margin: 5px 10px;
@@ -45,6 +46,9 @@ a.menu__list-item {
       box-shadow: -3px -4px 4px 0px rgba(255, 168, 0, 1);
       margin-top: 5px;
    }
+}
+.opacity {
+   opacity: 0.7;
 }
 
 .home {
@@ -188,9 +192,13 @@ a.menu__list-item {
    margin-bottom: 50px;
 }
 .portfolio__menu-item {
+   border: none;
+   background-color: transparent;
+   font-size: 22px;
    font-weight: 700;
    color: $black;
-   &.active {
+   cursor: pointer;
+   &.push {
       color: $orange;
    }
    &:hover {
@@ -248,6 +256,12 @@ a.menu__list-item {
    &:hover {
       text-decoration: underline;
    }
+}.anime {
+  transform: scale(0);
+  opacity: 0;
+}
+.hide {
+  display: none;
 }
 
 .cooperation {
