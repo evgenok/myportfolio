@@ -1,5 +1,6 @@
 "use strict"
 
+
 // -------------device-------------
 
 const isMobile = {
@@ -147,7 +148,7 @@ function myFunction() {
    }
 }
 
-// ---------------фильтр карточек портфолио-----------------
+// ---------------фильтр в портфолио-----------------
 
 function myapp() {
    const buttons = document.querySelectorAll(".portfolio__menu-item");
@@ -174,3 +175,19 @@ function myapp() {
 }
 
 myapp();
+
+// // --------переключатель кнопок---------
+
+let menu = document.querySelector('.portfolio__menu');
+let menuItem = document.querySelectorAll('button.portfolio__menu-item');
+
+menu.addEventListener("click", (event) =>{
+   let target = event.target;
+
+   if (target.classList.contains('portfolio__menu-item')) {
+      menuItem.forEach(card=>{
+         card.classList.remove('push')
+      })
+      target.classList.add('push')
+   }
+});
