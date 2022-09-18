@@ -4,7 +4,7 @@
 @import "keyframes";
 
 .header {
-   width: 100%;
+   max-width: 100%;
    background-color: $orange;
    position: fixed;
    top: 0;
@@ -30,6 +30,9 @@
    padding: -5px -10px;
    margin: 5px 10px;
 }
+.menu__list-btn{
+   display: none;
+}
 .btn {
    cursor: pointer;
    border: none;
@@ -44,7 +47,6 @@
    transition: all 0.2s linear;
    &:hover {
       box-shadow: -3px -4px 4px 0px rgba(255, 168, 0, 1);
-      margin-top: 5px;
    }
 }
 .opacity {
@@ -120,7 +122,7 @@
 .services__item {
    background-color: $white;
    text-align: center;
-   width: 450px;
+   max-width: 450px;
    height: 100%;
    padding: 10px;
    box-shadow: 5px 5px 20px 0px rgba(243, 103, 32, 0.5);
@@ -256,12 +258,13 @@
    &:hover {
       text-decoration: underline;
    }
-}.anime {
-  transform: scale(0);
-  opacity: 0;
+}
+.anime {
+   transform: scale(0);
+   opacity: 0;
 }
 .hide {
-  display: none;
+   display: none;
 }
 
 .cooperation {
@@ -362,7 +365,7 @@
 }
 .contacts__card {
    text-align: center;
-   width: 550px;
+   max-width: 550px;
    background-color: #fff;
    padding: 30px;
    box-shadow: 4px 4px 3px 0px rgba(124, 124, 126, 0.7);
@@ -411,7 +414,7 @@
    margin-bottom: 50px;
 }
 .contacts__form {
-   width: 530px;
+   max-width: 530px;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -476,5 +479,106 @@ a.footer__copy-item {
 .footer__copy-item + .footer__copy-item {
    margin-left: 15px;
 }
+
+.popup__bg {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   pointer-events: none;
+   transition: 0.5s all;
+   z-index: 2;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.popup__bg.active {
+   opacity: 1;
+   pointer-events: all;
+   transition: 0.5s all;
+}
+.popup {
+   position: absolute;
+   top: 100px;
+   left: 50%;
+   transform: translateX(-50%) scale(0);
+   transition: all 0.5s linear;
+   max-width: 500px;
+   max-height: auto;
+   border-radius: 20px;
+   background: url("../images/bg/atoms2.png") center, #f36720;
+   background-size: contain;
+   z-index: 3;
+}
+.popup.active {
+   transform: translateX(-50%) scale(1);
+}
+.modal__form {
+   padding: 0 40px 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.modal__top {
+   background-color: #d9d9d9;
+   max-height: 50px;
+   min-width: 500px;
+   border-radius: 20px 20px 0 0;
+   padding: 10px 40px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.round-close {
+   cursor: pointer;
+   border: none;
+   background: url("../images/icons/crest.svg") center;
+   background-size: contain;
+   width: 30px;
+   height: 30px;
+}
+.modal__title {
+   margin-top: 25px;
+   color: $white;
+   font-size: 24px;
+   font-weight: 500;
+   text-align: center;
+   line-height: 28px;
+}
+.modal__textarea,
+.modal__input {
+   margin-top: 40px;
+   display: block;
+   width: 100%;
+   border: none;
+   border-radius: 10px;
+   padding: 10px;
+}
+.modal__input {
+   height: 50px;
+}
+.modal__textarea {
+   resize: none;
+   height: 100px;
+}
+.modal__btn {
+   margin-top: 40px;
+}
+// .block-modal-test {
+//    width: 500px;
+//    height: 570px;
+//    border-radius: 20px;
+//    position: relative;
+//    overflow: hidden;
+// }
+// .form_slider{
+//    width: 1000px;
+//    height: 570px;
+//    transition: all 1s ease;
+//    margin-left: 0;
+// }
 
 @import "media";

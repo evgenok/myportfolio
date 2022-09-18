@@ -46,26 +46,6 @@ else {
    document.body.classList.add('_pc');
 }
 
-// -----------плавный scroll---------------
-
-const anchors = document.querySelectorAll('a[href*="#"]')
-
-for (let anchor of anchors) {
-   anchor.addEventListener('click', function (e) {
-      e.preventDefault()
-
-      const blockID = anchor.getAttribute('href').substr(1)
-
-      document.getElementById(blockID).scrollIntoView({
-         behavior: 'smooth',
-         block: 'start'
-      })
-      document.body.classList.remove('_lock');
-      iconMenu.classList.remove('_active');
-      menuBody.classList.remove('_active');
-   })
-}
-
 // --------Появление элементов при скролле--------------
 
 function onEntry(entry) {
@@ -180,14 +160,80 @@ myapp();
 
 let menu = document.querySelector('.portfolio__menu');
 let menuItem = document.querySelectorAll('button.portfolio__menu-item');
+let closePopupBtn = document.querySelector('.close-popup ');
 
-menu.addEventListener("click", (event) =>{
+menu.addEventListener("click", (event) => {
    let target = event.target;
 
    if (target.classList.contains('portfolio__menu-item')) {
-      menuItem.forEach(card=>{
+      menuItem.forEach(card => {
          card.classList.remove('push')
       })
       target.classList.add('push')
    }
 });
+
+// -------------форма---------------
+
+let popupBg = document.querySelector('.popup__bg');
+let popup = document.querySelector('.popup');
+let openPopupButton = document.querySelectorAll('.open-popup');
+
+
+openPopupButton.forEach((button) => {
+   button.addEventListener('click', (event) => {
+      event.preventDefault();
+      popupBg.classList.add('active');
+      popup.classList.add('active');
+      pageYOffset = window.pageYOffset;
+      isModalOpen = true;
+      document.addEventListener('scroll', onScroll);
+   })
+});
+
+closePopupBtn.addEventListener('click', () => {
+   popupBg.classList.remove('active');
+   popup.classList.remove('active');
+   isModalOpen = false;
+});
+
+document.addEventListener('click', (event) => {
+   if (event.target === popupBg) {
+      popupBg.classList.remove('active');
+      popup.classList.remove('active');
+   }
+});
+
+
+// ----------------меню под телефон и плавный скролл------------
+
+const iconMenu = document.querySelector('.menu__list-btn');
+const menuBody = document.querySelector('.menu__list');
+if (iconMenu) {
+
+   iconMenu.addEventListener("click", function (e) {
+      document.body.classList.toggle('_lock');
+      iconMenu.classList.toggle('_active');
+      menuBody.classList.toggle('_active');
+   });
+}
+
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+   anchor.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      const blockID = anchor.getAttribute('href').substr(1)
+
+      document.getElementById(blockID).scrollIntoView({
+         behavior: 'smooth',
+         block: 'start'
+      })
+      document.body.classList.remove('_lock');
+      iconMenu.classList.remove('_active');
+      menuBody.classList.remove('_active');
+   })
+}
+
+

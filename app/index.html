@@ -38,7 +38,8 @@
                   <li class="menu__group">Контакты</li>
                </a>
             </ul>
-            <button class="btn menu__btn">Оставить заявку</button>
+            <button type="button" class="btn menu__btn open-popup">Оставить заявку</button>
+            <div class="menu__list-btn"><span></span></div>
          </nav>
       </div>
    </header>
@@ -199,7 +200,7 @@
       <section class="cooperation">
          <div class="container">
             <h2 class="cooperation__title">Заинтересованы в сотрудничестве со мной?</h2>
-            <button class="btn cooperation__btn">Напишите мне!</button>
+            <button type="button" class="btn cooperation__btn open-popup">Напишите мне!</button>
          </div>
       </section>
 
@@ -332,7 +333,7 @@
                      свяжусь
                   </h2>
                   <form action="" class="contacts__form">
-                     <input type="text" class="contacts__name" placeholder="Ваше имя" >
+                     <input type="text" class="contacts__name" placeholder="Ваше имя">
                      <input type="text" class="contacts__email" placeholder="Ваш Email">
                      <input type="text" class="contacts__tel" placeholder="Ваш номер телефона">
                      <input type="text" class="contacts__services" placeholder="Услуга, которая вам необходима">
@@ -373,9 +374,32 @@
       </div>
    </footer>
 
+   <div class="popup__bg">
+      <div class="popup">
+         <form class="modal__form" action="">
+            <div class="modal__top">
+               <img src="images/icons/LOGOOR.svg" alt="" class="modal__logo">
+               <button type="button" class="close-popup round-close"></button>
+            </div>
+            <div class="modal__title">
+               Оставьте заявку на необходимую вам услугу
+            </div>
+            <input class="modal__input" type="text" placeholder="Имя:">
+            <input class="modal__input" type="email" placeholder="Телефон:">
+            <textarea class="modal__textarea" name="" placeholder="Сообщение:"></textarea>
+            <button type="button" class="modal__btn btn cooperation__btn">Отправить</button>
+         </form>
+      </div>
+   </div>
 
+   </div>
 
+   <!-- <div class="block-modal-test">
+      <div class="form-slider">
+      </div>
+   </div> -->
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
    <script src="js/lightbox-plus-jquery.min.js" defer></script>
    <script src="js/main.min.js"></script>
 

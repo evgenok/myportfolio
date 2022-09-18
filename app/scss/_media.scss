@@ -1,0 +1,112 @@
+@media (max-width: 815px) {
+   .header {
+   }
+   .page__menu {
+   }
+   .page__custom-settings {
+   }
+   .menu {
+   }
+   .menu__logo {
+   }
+   .menu__list {
+      display: block;
+      position: absolute;
+      top: 90px;
+      left: 0;
+      right: 0;
+      padding: 20px 0;
+      transform: translateX(-200%);
+      transition: all 0.7s;
+      z-index: 2;
+      align-items: center;
+      text-align: center;
+      background-color: #ffa502;
+      height: auto;
+   }
+   .header.opacity {
+      opacity: 1;
+   }
+   .menu__list._active {
+      transform: translateX(0);
+   }
+   .menu__list-link {
+      padding: 20px 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+   }
+   .menu__list-btn {
+      z-index: 5;
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+   }
+
+   .menu__list-btn span,
+   .menu__list-btn::after,
+   .menu__list-btn::before {
+      left: 0;
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      transition: all 0.3s ease 0s;
+      background-color: #efefef;
+   }
+
+   .menu__list-btn::before,
+   .menu__list-btn::after {
+      content: "";
+   }
+
+   .menu__list-btn::after {
+      bottom: 0;
+   }
+
+   .menu__list-btn::before {
+      top: 0;
+   }
+
+   .menu__list-btn span {
+      top: 50%;
+      transform: scale(1) translate(0px, -50%);
+   }
+
+   .menu__list-btn._active span {
+      transform: scale(0) translate(0px, -50%);
+   }
+
+   .menu__list-btn._active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0px, -50%);
+   }
+
+   .menu__list-btn._active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0px, 100%);
+   }
+   .r-list {
+   }
+   .menu__link {
+   }
+   .r-link {
+   }
+   .text-underlined {
+   }
+   .menu__list-item {
+      padding: 20px 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+   }
+   .menu__group {
+   }
+   .btn {
+   }
+   .menu__btn {
+   }
+   .open-popup {
+   }
+}
