@@ -160,7 +160,7 @@ myapp();
 
 let menu = document.querySelector('.portfolio__menu');
 let menuItem = document.querySelectorAll('button.portfolio__menu-item');
-let closePopupBtn = document.querySelector('.close-popup ');
+
 
 menu.addEventListener("click", (event) => {
    let target = event.target;
@@ -178,7 +178,7 @@ menu.addEventListener("click", (event) => {
 let popupBg = document.querySelector('.popup__bg');
 let popup = document.querySelector('.popup');
 let openPopupButton = document.querySelectorAll('.open-popup');
-
+let closePopupBtn = document.querySelector('.close-popup ');
 
 openPopupButton.forEach((button) => {
    button.addEventListener('click', (event) => {
