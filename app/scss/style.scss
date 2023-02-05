@@ -217,15 +217,16 @@
 }
 .portfolio__item {
    width: 360px;
-   height: 290px;
+   height: 240px;
    overflow: hidden;
    margin: 15px;
    position: relative;
 }
 .portfolio__img {
    position: absolute;
+   width: 360px;
+   height: 240px;
    z-index: 1;
-   min-width: 100%;
 }
 .portfolio__info {
    display: flex;
